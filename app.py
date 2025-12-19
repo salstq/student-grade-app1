@@ -1,7 +1,12 @@
 import streamlit as st
 import pandas as pd
 import joblib
+# Load model dan scaler
+model = joblib.load('model.pkl')
+scaler = joblib.load('scaler.pkl')
 
+
+st.set_page_config(page_title="Addicted Score Prediction", layout="centered")
 st.title("📱 Social Media Addiction Prediction")
 st.write("Masukkan data pengguna untuk memprediksi tingkat kecanduan media sosial.")
 
